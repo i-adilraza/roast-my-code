@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RoastMyCode 🔥</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Animated Background Glows -->
+  <div class="bg-glow-wrapper">
+    <!-- Cool Mode Orbs -->
+    <div class="glow-orb orb-cool orb-1"></div>
+    <div class="glow-orb orb-cool orb-2"></div>
+    <div class="glow-orb orb-cool orb-3"></div>
+    <!-- Warm Mode Orbs -->
+    <div class="glow-orb orb-warm orb-1"></div>
+    <div class="glow-orb orb-warm orb-2"></div>
+    <div class="glow-orb orb-warm orb-3"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="header">
+      <h1>🔥 <span>RoastMyCode</span></h1>
+      <p>Paste your code — get reviewed or get roasted.</p>
+    </div>
+
+    <!-- 3D Tilt Card Wrapper -->
+    <div class="tilt-card-wrapper">
+      <div class="card tilt-element">
+        <textarea id="codeInput" placeholder="// Paste your code here..."></textarea>
+
+        <div class="controls">
+          <div class="toggle-wrap">
+            <span class="label-normal">😇 Normal</span>
+            <label class="switch">
+              <input type="checkbox" id="modeToggle" />
+              <span class="slider"></span>
+            </label>
+            <span class="label-roast">🔥 Roast</span>
+          </div>
+          <button id="submitBtn" class="glow-btn" onclick="analyzeCode()">Analyze →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Output Terminal -->
+    <div class="tilt-card-wrapper">
+      <div id="output" class="output hidden tilt-element">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div id="modeBadge"></div>
+        </div>
+        <div id="resultText" class="terminal-body"></div>
+      </div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
